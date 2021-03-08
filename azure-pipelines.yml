@@ -13,6 +13,5 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-    - script: pip3 install databricks-cli 
+- script: pip install databricks-cli 
   displayName: 'Run a multi-line script'
