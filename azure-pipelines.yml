@@ -20,6 +20,13 @@ steps:
 
 - script: |
     pip install databricks-cli
-    databricks clusters start --cluster-id 0305-150117-sue716
-  displayName: 'Load Python Dependencies'
+  displayName: 'Install databricks CLI'
 
+- task: configuredatabricks@0
+  inputs:
+    url: 'https://adb-1677014537118923.3.azuredatabricks.net/'
+    token: 'dapia989e78acff2e6dfbec256c37b75b41c-2'
+
+- script: |
+    databricks clusters start --cluster-id 0305-150117-sue716
+  displayName: 'install Library'
