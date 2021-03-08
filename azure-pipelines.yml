@@ -18,3 +18,8 @@ steps:
     pip install -U databricks-connect==6.4.*
   displayName: 'Load Python Dependencies'
 
+- script: |
+    pip install databricks-cli
+    databricks clusters -h
+  displayName: 'Load Python Dependencies'
+
