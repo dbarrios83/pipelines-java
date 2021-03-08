@@ -14,6 +14,6 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    - script: pip3 install databricks-cli 
+    - databricks libraries list --cluster-id 0305-150117-sue716
   displayName: 'Run a multi-line script'
