@@ -15,5 +15,4 @@ steps:
 
 - script: |
     - script: pip3 install databricks-cli 
-    - databricks libraries list --cluster-id 0305-150117-sue716
   displayName: 'Run a multi-line script'
