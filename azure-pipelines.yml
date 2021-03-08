@@ -28,5 +28,6 @@ steps:
     token: 'dapia989e78acff2e6dfbec256c37b75b41c-2'
 
 - script: |
+    databricks configure
     databricks clusters start --cluster-id 0305-150117-sue716
   displayName: 'install Library'
