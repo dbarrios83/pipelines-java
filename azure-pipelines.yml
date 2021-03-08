@@ -1,0 +1,33 @@
+# Azure Databricks Build Pipeline
+# azure-pipelines.yml
+
+trigger:
+- release
+
+pool:
+  name: Hosted Ubuntu 1604
+
+steps:
+- task: UsePythonVersion@0
+  displayName: 'Use Python 3.7'
+  inputs:
+    versionSpec: 3.7
+
+- script: |
+    pip install pytest requests setuptools wheel
+    pip install -U databricks-connect==6.4.*
+  displayName: 'Load Python Dependencies'
+
+- script: |
+    pip install databricks-cli
+  displayName: 'Install databricks CLI'
+
+- task: configuredatabricks@0
+  inputs:
+    url: 'https://adb-1677014537118923.3.azuredatabricks.net/'
+    token: 'dapia989e78acff2e6dfbec256c37b75b41c-2'
+
+
+- task: startcluster@0
+  inputs:
+    clusterid: '0305-150117-sue716'
