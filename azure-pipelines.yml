@@ -31,3 +31,8 @@ steps:
     databricks configure
     databricks clusters start --cluster-id 0305-150117-sue716
   displayName: 'install Library'
+
+
+- task: startcluster@0
+  inputs:
+    clusterid: '0305-150117-sue716'
