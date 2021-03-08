@@ -20,6 +20,6 @@ steps:
 
 - script: |
     pip install databricks-cli
-    databricks clusters -h
+    databricks clusters start --cluster-id 0305-150117-sue716
   displayName: 'Load Python Dependencies'
 
